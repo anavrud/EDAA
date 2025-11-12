@@ -9,6 +9,17 @@
 # Helper notebook
 /notebooks
 
+# AVIRIS data and runs
+data/
+f100517t01p00r10rdn_b/
+f100517t01p00r11rdn_b/
+_run_10
+_run_11
+oil_10_300/
+oil_11_300/
+runs_with_different_norm/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

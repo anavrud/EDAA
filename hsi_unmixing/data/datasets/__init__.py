@@ -4,3 +4,4 @@ from .Samson import SamsonDataset
 from .Urban import Urban4Dataset, Urban5Dataset, Urban6Dataset
 from .WDC import WDCDataset
 from .Sim1 import Sim1Dataset
+from .AVIRIS import AVIRISDataset

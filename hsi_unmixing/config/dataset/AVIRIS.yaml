@@ -1,0 +1,42 @@
+_target_: hsi_unmixing.data.datasets.AVIRISDataset
+
+p: 3    # Just water + oil (no cloud)
+
+# DATASET 11
+row_range: [7050, 7350]  
+col_range: [150, 450]     
+
+
+
+
+
+# DATASET 10
+
+# -- low oil cloud --
+#row_range: [2200, 2500]  
+#col_range: [200, 500]     
+
+#row_range: [4000, 4300]  
+#col_range: [200, 500]     
+
+# -- medium oil cloud --
+#row_range: [6800, 7100]  
+#col_range: [400, 700]     
+
+#row_range: [6600, 6900]  
+#col_range: [400, 700]  
+
+#row_range: [5000, 5300]  
+#col_range: [400, 700]  
+
+
+## -----------------------
+
+
+# -- Low oil no cloud --
+#row_range: [12800, 13100]  
+#col_range: [200, 500]     
+
+#row_range: [12600, 12900]  
+#col_range: [400, 700]     
+#aviris_rgb_tile_257_r12800-13100_c200-500
