@@ -143,7 +143,15 @@ class HSI:
         """
         title = f"{self.shortname}"
         ylabel = "Reflectance"
-        xlabel = "# Bands"
+        
+        # Use wavelengths if available, otherwise use band index
+        if hasattr(self, 'wavelengths') and self.wavelengths is not None: # Has attribute and there are wavelengths
+            xlabel = "Wavelength (nm)"
+            x_axis = self.wavelengths
+        else:
+            xlabel = "# Bands"
+            x_axis = np.arange(self.L)
+        
         if E0 is None:
             E = np.copy(self.scaledE)
             title += " GT Endmembers\n"
@@ -158,7 +166,7 @@ class HSI:
         plt.figure(figsize=(6, 6))
         for pp in range(self.p):
             data = E[:, pp]
-            plt.plot(data, label=self.labels[pp], linestyle=linestyle)
+            plt.plot(x_axis, data, label=self.labels[pp], linestyle=linestyle)
         plt.title(title)
         plt.legend(frameon=True)
         plt.xlabel(xlabel)

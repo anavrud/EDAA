@@ -7,7 +7,7 @@ from hsi_unmixing.models.metrics import (
     SADAggregator,
     ERMSEAggregator,
 )
-from hsi_unmixing.utils import save_estimates
+from hsi_unmixing.utils import save_estimates, save_endmembers_json
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -96,3 +96,6 @@ def main(cfg):
 
     # Save last estimates
     save_estimates(E1, A1, hsi)
+    
+    # Save endmembers with wavelengths to JSON
+    save_endmembers_json(E1, hsi, filename="endmembers.json")

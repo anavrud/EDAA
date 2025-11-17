@@ -3,9 +3,14 @@ _target_: hsi_unmixing.data.datasets.AVIRISDataset
 p: 3    # Just water + oil (no cloud)
 
 # DATASET 11
-row_range: [7050, 7350]  
-col_range: [150, 450]     
+#row_range: [7050, 7350]  
+#col_range: [150, 450]     
 
+
+
+# DATASET 10
+row_range: [5000, 5300]  
+col_range: [400, 700] 
 
 
 
