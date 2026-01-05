@@ -10,7 +10,7 @@
 /notebooks
 
 # AVIRIS data and runs
-data/
+/data/
 f100517t01p00r10rdn_b/
 f100517t01p00r11rdn_b/
 _run_10/
