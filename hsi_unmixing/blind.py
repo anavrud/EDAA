@@ -1,4 +1,5 @@
 import logging
+import time
 
 from hydra.utils import instantiate
 
@@ -47,6 +48,9 @@ def main(cfg):
 
         Y, _, _ = hsi(asTensor=cfg.torch)
 
+        # Start timing BlindEDAA execution
+        start_time = time.time()
+        
         E0, A0 = model.solve(
             Y,
             hsi.p,
@@ -54,6 +58,10 @@ def main(cfg):
             H=hsi.H,
             W=hsi.W,
         )
+        
+        # End timing and log results
+        elapsed_time = time.time() - start_time
+        logger.info(f"BlindEDAA execution time for run {run}: {elapsed_time:.2f} seconds ({elapsed_time/60:.2f} minutes)")
 
         A1 = aligner.fit_transform(A0)
         E1 = aligner.transform_endmembers(E0)

@@ -13,11 +13,27 @@
 data/
 f100517t01p00r10rdn_b/
 f100517t01p00r11rdn_b/
-_run_10
-_run_11
+_run_10/
+_run_11/
+03_run_10/
+04_run_11/
 oil_10_300/
 oil_11_300/
 runs_with_different_norm/
+
+# Results and outputs
+00_pre_thesis_results/
+01_abundances/
+02_comparison/
+batch_logs/
+comparison/
+figs/
+
+# Thesis folder
+thesis/
+
+# Generated figures
+*.png
 
 
 # Byte-compiled / optimized / DLL files
@@ -138,6 +154,9 @@ venv.bak/
 # Spyder project settings
 .spyderproject
 .spyproject
+
+# Ignore plot_abundances.py
+utils/plot_abundances.py
 
 # Rope project settings
 .ropeproject
